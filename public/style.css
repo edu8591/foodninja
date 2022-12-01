@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /*
 ! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com
@@ -515,16 +515,8 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.absolute{
-  position: absolute;
-}
-
-.top-2{
-  top: 0.5rem;
-}
-
-.left-2{
-  left: 0.5rem;
+.col-span-2{
+  grid-column: span 2 / span 2;
 }
 
 .m-4{
@@ -551,6 +543,10 @@ video {
   display: flex;
 }
 
+.grid{
+  display: grid;
+}
+
 .h-32{
   height: 8rem;
 }
@@ -559,16 +555,20 @@ video {
   width: 100%;
 }
 
+.grid-cols-3{
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .justify-center{
   justify-content: center;
 }
 
-.rounded{
-  border-radius: 0.25rem;
+.gap-10{
+  gap: 2.5rem;
 }
 
-.rounded-full{
-  border-radius: 9999px;
+.rounded{
+  border-radius: 0.25rem;
 }
 
 .border-b{
@@ -611,10 +611,6 @@ video {
 
 .p-4{
   padding: 1rem;
-}
-
-.p-2{
-  padding: 0.5rem;
 }
 
 .px-16{
@@ -668,11 +664,6 @@ video {
 .text-sm{
   font-size: 0.875rem;
   line-height: 1.25rem;
-}
-
-.text-xs{
-  font-size: 0.75rem;
-  line-height: 1rem;
 }
 
 .font-bold{
@@ -750,7 +741,29 @@ video {
   }
 }
 
+@media (min-width: 768px){
+  .md\:col-span-1{
+    grid-column: span 1 / span 1;
+  }
+
+  .md\:col-span-2{
+    grid-column: span 2 / span 2;
+  }
+
+  .md\:grid{
+    display: grid;
+  }
+
+  .md\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 @media (min-width: 1024px){
+  .lg\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .lg\:justify-end{
     justify-content: flex-end;
   }
