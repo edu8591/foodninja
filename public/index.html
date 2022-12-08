@@ -8,31 +8,35 @@
   <title>Food Ninja</title>
   <script src="https://kit.fontawesome.com/8af68b1bcc.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css" />
+  <script src="./index.js" defer></script>
 </head>
 
 <body class="font-body text-gray-600">
   <div class="md:grid md:grid-cols-3">
-    <div class="md:col-span-1">
-      <nav>
-        <div>
+    <div class="md:col-span-1 md:flex md:justify-end">
+      <nav class="text-right">
+        <div class="flex justify-between items-center">
           <h1 class="border-b border-gray-100 p-4 font-bold uppercase hover:text-gray-700">
             <a href="/">Food Ninja</a>
           </h1>
+          <div class="px-4 cursor-pointer md:hidden">
+            <i class="fa-solid fa-bars" id="burguer"></i>
+          </div>
         </div>
-        <ul>
-          <li class="font-bold text-gray-700">
-            <a href="#">
-              <span>Home</span> <i class="fa-solid fa-house"></i>
+        <ul class="text-sm mt-6 hidden md:block" id="menu">
+          <li class="font-bold text-gray-700 py-1">
+            <a href="#" class="border-r-4 border-primary">
+              <span>Home</span> <i class="fa-solid fa-house mx-2"></i>
             </a>
           </li>
-          <li>
-            <a href="#">
-              <span>About</span> <i class="fa-regular fa-circle-question"></i>
+          <li class="py-1">
+            <a href="#" class="border-r-4 border-white">
+              <span>About</span> <i class="fa-regular fa-circle-question mx-2"></i>
             </a>
           </li>
-          <li>
-            <a href="#">
-              <span>Contact</span> <i class="fa-regular fa-envelope"></i>
+          <li class="py-1">
+            <a href="#" class="border-r-4 border-white">
+              <span>Contact</span> <i class="fa-regular fa-envelope mx-2"></i>
             </a>
           </li>
         </ul>
@@ -102,7 +106,7 @@
           <!-- cards go here -->
         </div>
         <div class="flex justify-center">
-          <div class="btn bg-secondary-100 px-2 text-secondary-200 hover:shadow-inner">
+          <div class="btn bg-secondary-100 px-2 text-secondary-200 hover:shadow-inner hover:scale-125 hover:bg-opacity-50 transition ease-out duration-300">
             Load more
           </div>
         </div>
